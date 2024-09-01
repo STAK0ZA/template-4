@@ -6,12 +6,117 @@
     --orange-color:#f59e0b;
     --blue-color:#0075ff;
     --blue-alt-color:#0d69d5;
+    --hover:#f6f6f6;
+}
+*{
+    box-sizing: border-box;
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;  
 }
-*{
-    box-sizing: border-box;
+.container{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: calc(750px - 30px);
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: calc(970px - 30px);
+    }
+}
+  /* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+.icons{
+    width: 14px;
+}
+/*  start setting for main padge */
+.main-flex{
+    display: flex;
+    min-height: 100vh;
+}
+/* start left side */
+.main-flex .left-bar{
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 0 10px #ddd;
+}
+.main-flex .left-bar .header{
+    margin-bottom: 40px;
+    position: relative;
+}
+.main-flex .left-bar .header h3{
+    margin: 0;
+    position: relative;
+    padding: 0 5px;
+    text-align: center;
+}
+.main-flex .left-bar .header::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 65%;
+    height: 2px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    z-index: 1;
+}
+.main-flex .left-bar .header::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -29.5px;
+    border: 3px solid white;
+    z-index: 2;
+}
+.main-flex .left-bar .cats {
+    position: sticky;
+    top: 30px;
+}
+.main-flex .left-bar .cats .box{
+    transition: .3s;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.main-flex .left-bar .cats .box.active{
+    background-color: var(--hover) !important;
+}
+.main-flex .left-bar .cats .box:hover{
+    background-color: var(--hover);
+}
+.main-flex .left-bar .cats .box a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.main-flex .left-bar .cats .box img{
+    margin-right: 10px;
+}
+/* end left side */
+.main-flex .content{
+    background-color: blue;
+}
+/* end setting for main padge */
