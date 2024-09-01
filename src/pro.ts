@@ -6,6 +6,23 @@ cats.forEach((e)=>{
         })
     })
 // end make the functuality for the left-bar
+// start the top-nav
+let x =document.querySelector(".topbar .eye input") as HTMLInputElement
+let out=document.querySelector(".esc") as HTMLElement
+out.onclick=()=>{
+    x.value=""
+    out.style.display="none"
+}
+x.oninput= ()=>{
+    out.style.display="block"
+}
+x.onblur= ()=>{
+    if(x.value=="")
+    {
+        out.style.display="none"
+    }
+}
+// end the top-nav
 // function for delete the calss active and put it in clicked
 function removandput(all:NodeListOf<Element>,current:Element){
 console.log(current)

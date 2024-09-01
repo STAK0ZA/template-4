@@ -53,6 +53,7 @@ body{
     padding: 20px;
     width: 200px;
     box-shadow: 0 0 10px #ddd;
+    position: relative;
 }
 .main-flex .left-bar .header{
     margin-bottom: 40px;
@@ -96,7 +97,7 @@ body{
 .main-flex .left-bar .cats .box{
     transition: .3s;
     border-radius: 8px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     width: 100%;
 }
 .main-flex .left-bar .cats .box.active{
@@ -115,8 +116,277 @@ body{
 .main-flex .left-bar .cats .box img{
     margin-right: 10px;
 }
+@media (max-width: 766px) {
+    .main-flex .left-bar .cats .box a span{  
+        display: none;
+    }
+    .main-flex .left-bar .cats .box a img{  
+        margin:0;
+    }
+    .main-flex .left-bar {  
+        padding: 5px;
+        width: 65px;
+    }
+    .main-flex .left-bar .cats .box a{
+        justify-content: center;
+    }
+    .main-flex .left-bar .header {
+        margin-bottom:10px; 
+    }
+    .main-flex .left-bar .header h3{
+        font-size: 13px;
+        text-align: left;
+        font-weight: bold;
+    }
+    .main-flex .left-bar .header::before,
+    .main-flex .left-bar .header::after{
+        display: none;
+    }
+    .main-flex .left-bar .cats .box a img.icons{
+        width: 16px;
+    }
+}
 /* end left side */
 .main-flex .content{
-    background-color: blue;
+    background-color: var(--hover);
+    width: 100%;
 }
 /* end setting for main padge */
+/* start the top-bar */
+.topbar{
+    background-color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.topbar input{
+    border: 1px solid var(--gray-color);
+    border-radius: 8px;
+    padding: 8px 20px;
+    width: 140px;
+    transition: .5s;
+    position: relative;
+}
+.topbar .eye span{
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    transition: .3s;
+}
+.topbar .eye span:hover{
+    color: var(--red-color);
+}
+.topbar input:focus::placeholder{
+    opacity: 0;
+}
+.topbar input::placeholder{
+    font-size: 13px;
+    opacity: 1;
+}
+.topbar input:focus{
+    outline: none;
+    width: 200px;
+}
+.topbar div{
+    display: flex;
+    gap: 14px;
+    position: relative;
+}
+.topbar div .nato img:first-child{
+    width: 18px;
+    position: relative;
+}
+.topbar div .nato:first-child::after{
+    content: "";
+    position: absolute;
+    background-color: var(--red-color);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    right: -5px;
+}
+::placeholder{
+    transition: .3s;
+}
+.topbar div img:last-child{
+    width: 30px;
+}
+.topbar .eye img{
+    position: absolute;
+    top: 11px;
+    left: 5px;
+    z-index: 1;
+}
+/* end the top-bar */
+/* start the dashboar */
+.main-box{
+    margin: 20px;
+}
+.main-box h1{
+    position: relative;
+    margin-bottom: 40px;
+}
+.main-box h1::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 3px;
+    background-color: black;
+    width: 60px;
+}
+.main-box h1::before{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    height: 3px;
+    background-color: white;
+    width: 120px;
+}
+.main-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+    gap: 20px;
+}
+@media (max-width: 766px) {
+    .main-grid{
+        display: grid;
+        grid-template-columns: minmax(200px,1fr);
+        gap: 20px;
+    }
+}
+.main-grid .box{
+    background-color: white;
+    padding: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+/* end the dashboar */
+/* start welcome box*/
+.main-grid >.box:first-child{
+    padding: 0;
+}
+.main-grid .box .hi{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    padding: 15px;
+}
+.main-grid .box .hi div:first-child h2{
+    font-weight: bold;
+    margin: 10px 0 10px;
+}
+.main-grid .box .hi div:first-child p{
+    color: var(--gray-color);
+}
+.main-grid .box .hi div:last-child img{
+    width: 200px;
+}
+.main-grid .box .profile{
+    padding: 0 15px;
+    height: fit-content;
+    margin-top: -30px;
+}
+.main-grid .box .profile img{
+    width: 60px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    outline: 3px solid white;
+}
+.main-grid .box hr{
+    border: 0;
+    border-top: 1px solid var(--main-color);
+}
+.main-grid .box .user{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+.main-grid .box .user .box span{
+    color: var(--gray-color);
+}
+.main-grid .box .profile-btn {
+    padding: 15px;
+    text-align: right;
+}
+.main-grid .box .profile-btn button{
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    padding: 4px 6px;
+    background-color: var(--blue-color);
+    transition: .3s;
+}
+.main-grid .box .profile-btn button:hover{
+    background-color: var(--blue-alt-color);
+}
+.main-grid .box .profile-btn button a{
+    text-decoration: none;
+    color: white;
+}
+@media (max-width: 766px) {
+    .main-grid .box .user{
+        flex-direction: column;
+    }
+    .main-grid .box .profile{
+        text-align: center;
+    }
+    .main-grid .box .hi div:last-child img{
+        display: none;
+    }
+}
+/* end welcome box*/
+/* start the quick DrAft */
+.main-grid .box .common-head h2{
+    font-weight: bold;
+    margin: 10px 0 10px;
+}
+.main-grid .box .common-head p{
+    color: var(--gray-color);
+}
+.main-grid .box .common-head p{
+    color: var(--gray-color);
+}
+.main-grid .box .Quick-draft input,
+.main-grid .box .Quick-draft textarea{
+    display: block;
+    width: 100%;
+    border: 0;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+.main-grid .box .Quick-draft input:focus,
+.main-grid .box .Quick-draft textarea:focus{
+    outline: none;
+}
+.main-grid .box .Quick-draft textarea{
+    resize: none;
+    margin-top: 15px;
+    min-height: 180px;
+}
+.main-grid .box .Quick-draft div:last-child{
+    text-align: right;
+}
+.main-grid .box .Quick-draft button{
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 0;
+    transition: .3s;
+    background-color: var(--blue-color);
+    color: white;
+    cursor: pointer;
+    padding: 4px 6px;
+}
+.main-grid .box .Quick-draft button:hover{
+    background-color: var(--blue-alt-color);
+}
+/* end the quick DrAft */
