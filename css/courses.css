@@ -1,0 +1,93 @@
+:root{
+    --main-color:#eeeeee;
+    --gray-color:#888;
+    --green-color:#22c55e;
+    --red-color:#f44336;
+    --orange-color:#f59e0b;
+    --blue-color:#0075ff;
+    --blue-alt-color:#0d69d5;
+    --hover:#f6f6f6;
+}
+/* start the Courses edit */
+.main-box .grid-courses{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+}
+.main-box .grid-courses .course{
+    border-radius: 8px;
+    background-color: white;
+    overflow: hidden;
+}
+.main-box .grid-courses .course .course-ph{
+    position: relative;
+}
+.main-box .grid-courses .course .course-ph img:first-child{
+    width: 70px;
+    border-radius: 50%;
+    border: 3px solid white;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+.main-box .grid-courses .course .course-ph img:last-child{
+    display: block;
+    width: 100%;
+}
+.main-box .grid-courses .course .course-content {
+    padding: 20px;
+    font-size: 15px;
+}
+.main-box .grid-courses .course .course-content h3{
+    font-size: 16px;
+    margin-top: 10px;
+}
+.main-box .grid-courses .course .course-content p{
+    color: var(--gray-color);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+.main-box .grid-courses .course .course-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--main-color);
+    padding: 0 10px;
+}
+.main-box .grid-courses .course .course-info div:first-child{
+    display: flex;
+}   
+.main-box .grid-courses .course .course-info div:first-child img{
+    width: 13px;
+    margin-right: 2px;
+    margin-top: -3px;
+}
+.main-box .grid-courses .course .course-info div:first-child p{
+    font-size: 13px;
+    color: var(--gray-color);
+}
+
+.main-box .grid-courses .course .course-info .C-f{
+    transform: translateY(-50%);
+    align-self: flex-start;
+}
+.main-box .grid-courses .course .course-info .C-f span{
+    background-color: var(--blue-color);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+.main-box .grid-courses .course .course-info div:last-child{
+    display: flex;
+    align-items: center;
+}
+.main-box .grid-courses .course .course-info div:last-child img{
+    width: 10px;
+}
+.main-box .grid-courses .course .course-info div:last-child p{
+    font-size: 13px;
+    line-height: 1px;
+    color: var(--gray-color);
+}
+/* end the Courses edit */
