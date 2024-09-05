@@ -7,6 +7,7 @@
     --blue-color:#0075ff;
     --blue-alt-color:#0d69d5;
     --hover:#f6f6f6;
+    --background-color:#f1f5f9;
 }
 ::-webkit-scrollbar-thumb{
     background-color: var(--blue-alt-color);
@@ -160,7 +161,7 @@ body{
 }
 /* end left side */
 .main-flex .content{
-    background-color: var(--hover);
+    background-color: var(--background-color);
     width: 100%;
 }
 /* end setting for main padge */

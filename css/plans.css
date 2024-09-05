@@ -1,0 +1,90 @@
+:root{
+    --background-color:#f1f5f9;
+    --main-color:#eeeeee;
+    --gray-color:#888;
+    --green-color:#22c55e;
+    --red-color:#f44336;
+    --orange-color:#f59e0b;
+    --blue-color:#0075ff;
+    --blue-alt-color:#0d69d5;
+    --hover:#f6f6f6;
+}
+.main-box .main-grid-plans{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 20px;
+
+}
+.main-box .main-grid-plans .plan{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.main-box .main-grid-plans .plan .header-plan{
+    color: white;
+    text-align: center;
+    background-color: var(--green-color);
+    outline: 4px solid var(--green-color);
+    border: 4px solid white;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+.main-box .main-grid-plans .plan:nth-child(2) .header-plan{
+    background-color: var(--blue-alt-color);
+    outline: 4px solid var(--blue-alt-color);
+}
+.main-box .main-grid-plans .plan:nth-child(3) .header-plan{
+
+    background-color: var(--orange-color);
+    outline: 4px solid var(--orange-color);
+}
+.main-box .main-grid-plans .plan .header-plan h2:first-child{
+    margin: 0;
+    margin-bottom: 10px;
+}
+.main-box .main-grid-plans .plan .header-plan h2:last-child{
+    font-size: 40px;
+    font-weight: 400;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+.main-box .main-grid-plans .plan .header-plan h2:last-child span{
+    font-size: 20px;
+    position: absolute;
+    top: 3px;
+    left: -14px;
+}
+.main-box .main-grid-plans .plan .feature{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--main-color);
+}
+.main-box .main-grid-plans .plan .feature div{
+    display: flex;
+    gap: 10px;
+
+}
+.main-box .main-grid-plans .plan button{
+    margin-top: 15px;
+    border: 0;
+    padding: 4px 6px;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--green-color);
+    cursor: pointer;
+    font-size: 18px;
+}
+.main-box .main-grid-plans .plan:nth-child(2) button{
+    background-color: var(--blue-alt-color);
+}
+@media (max-width:767px){
+    .main-box .main-grid-plans{
+        grid-template-columns: minmax(200px, 1fr);
+    }
+}
+.main-box .main-grid-plans .plan p.ur-plan{
+    text-align: center;
+    color: var(--gray-color);
+    margin-bottom: 0;
+}
