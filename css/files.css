@@ -1,0 +1,168 @@
+:root{
+    --main-color:#eeeeee;
+    --gray-color:#888;
+    --green-color:#22c55e;
+    --red-color:#f44336;
+    --orange-color:#f59e0b;
+    --blue-color:#0075ff;
+    --blue-alt-color:#0d69d5;
+    --hover:#f6f6f6;
+}
+.flex-files{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+.flex-files .all-files{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 20px;
+    flex: 1;
+}
+.flex-files .all-files .file{
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    
+}
+.flex-files .all-files .file:hover .file-info img{
+    transform: rotate(7deg);
+}
+.flex-files .all-files .file .file-info{
+    text-align: center;
+}
+.flex-files .all-files .file .file-info img{
+    transition: .3s;
+    width: 64px;
+}
+.flex-files .all-files .file .file-info h3{
+    font-size: 15px;
+    font-weight: 400;
+}
+.flex-files .all-files .file div:nth-child(3) p{
+    color: var(--gray-color);
+    font-size: 13px;
+}
+.flex-files .all-files .file .file-date{
+    border-top: 1px solid var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.flex-files .all-files .file .file-date p{
+    font-size: 13px;
+    color: var(--gray-color);
+    margin: 0;
+    letter-spacing: .5px;
+}
+.flex-files .all-files .file .file-date span{
+    font-size: 13px;
+    color: var(--gray-color);
+}
+
+.flex-files .file-statistics{
+    background-color: white;
+    min-width: 230px;
+    padding: 15px;
+    border-radius: 10px;
+}
+.flex-files .file-statistics h2{
+    margin-top: 0px;
+
+}
+.flex-files .file-statistics .files-boxs{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.flex-files .file-statistics .files-boxs .statistic-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--main-color);
+    border-radius: 8px;
+    padding: 10px;
+
+}
+.flex-files .file-statistics .files-boxs .statistic-box div:first-child{
+    padding: 12px;
+    background-color: #cce3ff;
+}
+.flex-files .file-statistics .files-boxs .statistic-box:nth-child(2) div:first-child{
+
+    background-color: #d3f3df;
+}
+.flex-files .file-statistics .files-boxs .statistic-box:nth-child(3) div:first-child{
+    background-color: #fdd9d7;
+    
+}
+.flex-files .file-statistics .files-boxs .statistic-box:nth-child(3) div:first-child img{
+    height: 16px;
+}
+.flex-files .file-statistics .files-boxs .statistic-box:nth-child(4) div:first-child{
+
+    background-color: #fdecce;
+}
+.flex-files .file-statistics .files-boxs .statistic-box div:first-child img{
+    display: block;
+    width: 16px;
+}
+.flex-files .file-statistics .files-boxs .statistic-box div:nth-child(2) {
+    flex: 1;
+    margin-left: 10px;
+}
+.flex-files .file-statistics .files-boxs .statistic-box div:nth-child(2) p:first-child{
+    margin-bottom: 5px;
+    font-size: 12px;
+    margin-top: 0;
+
+}
+.flex-files .file-statistics .files-boxs .statistic-box div:nth-child(2) p:last-child{
+    margin: 0;
+    font-size: 12px;
+    color: var(--gray-color);
+}
+.flex-files .file-statistics .files-boxs .statistic-box span{
+    font-size: 12px;
+    color: var(--gray-color);
+
+}
+.flex-files .file-statistics .files-boxs button{
+    align-self: center;
+    background-color: var(--blue-color);
+    border: 0;
+    border-radius: 8px;
+    transition: .3s;
+    cursor: pointer;
+}
+.flex-files .file-statistics .files-boxs button a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 13px;
+}
+.flex-files .file-statistics .files-boxs button:hover { 
+    background-color: var(--blue-alt-color);
+}
+.flex-files .file-statistics .files-boxs button img{ 
+    width:  12px;
+}
+.flex-files .file-statistics .files-boxs button:hover img{ 
+
+    animation: moveup infinite linear alternate .2s;
+}
+@keyframes moveup{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-2px);
+        
+    }
+}
+
