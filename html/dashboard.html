@@ -86,7 +86,7 @@
                     <h1>Dashboard</h1>
                     <div class="main-grid">
                         <!-- start welcome box -->
-                        <div class="box">
+                        <div class="box first">
                             <div class="hi">
                                 <div>
                                     <h2>Welcome</h2>
@@ -183,7 +183,7 @@
                                     <div class="box">
                                         <div><img src="../imgs/dashboard imgs/Tickets Statistics//spinner-solid.svg" alt="" class="icons"></div>
                                         <h3>500</h3>
-                                        <p>Pending</p>
+                                        <p><span>Pending</span></p>
                                     </div>
                                     <div class="box">
                                         <div><img src="../imgs/dashboard imgs/Tickets Statistics/circle-check-regular.svg" alt="" class="icons"></div>
@@ -443,7 +443,7 @@
                                 </div>
                                 <div class="likes">
                                     <div>
-                                        <img src="../imgs/dashboard imgs/Latest Post/heart-regular.svg" alt="" class="icons">
+                                        <img src="../imgs/dashboard imgs/Latest Post/heart-regular.svg" alt="" class="icons" id="heart" data-color="notcolored">
                                         <span>1.8K</span>
                                     </div>
                                     <div>
@@ -489,6 +489,93 @@
                         <div class="common-head">
                             <h2>Projects</h2>
                         </div>
+                        <div class="res-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>Finish Date</td>
+                                        <td>Client</td>
+                                        <td>Price</td>
+                                        <td>Team</td>
+                                        <td>Status</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Ministry Wikipedia</td>
+                                        <td>10 May 2022</td>
+                                        <td>Ministry</td>
+                                        <td>$5300</td>
+                                        <td>
+                                            <img src="../imgs/projects/team-01.png" alt="">
+                                            <img src="../imgs/projects/team-02.png" alt="">
+                                            <img src="../imgs/projects/team-03.png" alt="">
+                                            <img src="../imgs/projects/team-04.png" alt="">
+                                        </td>
+                                        <td class="table-status"><span>Pending</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Stakoza Shop</td>
+                                        <td>12 Oct 2021</td>
+                                        <td>Stakoza Company</td>
+                                        <td>$1500</td>
+                                        <td>
+                                            <img src="../imgs/projects/team-01.png" alt="">
+                                            <img src="../imgs/projects/team-02.png" alt="">
+                                            <img src="../imgs/projects/team-04.png" alt="">
+                                        </td>
+                                        <td class="table-status"><span>In progress</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bouba App</td>
+                                        <td>05 Sep 2021</td>
+                                        <td>Bouba</td>
+                                        <td>$800</td>
+                                        <td>
+                                            <img src="../imgs/projects/team-01.png" alt="">
+                                            <img src="../imgs/projects/team-02.png" alt="">
+                                        </td>
+                                        <td class="table-status"><span>Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mahmoud Website</td>
+                                        <td>22 May 2021</td>
+                                        <td>Mahmoud</td>
+                                        <td>$600</td>
+                                        <td>
+                                            <img src="../imgs/projects/team-02.png" alt="">
+                                            <img src="../imgs/projects/team-03.png" alt="">
+                                        </td>
+                                        <td class="table-status"><span>Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ali Website</td>
+                                        <td>24 May 2021	</td>
+                                        <td>Ali</td>
+                                        <td>$300</td>
+                                        <td>
+                                            <img src="../imgs/projects/team-01.png" alt="">
+                                            <img src="../imgs/projects/team-03.png" alt="">
+                                        </td>
+                                        <td class="table-status"><span>Rejected</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arena Application</td>
+                                        <td>01 Mar 2021	</td>
+                                        <td>Arena Company</td>
+                                        <td>$2600</td>
+                                        <td>
+                                            <img src="../imgs/projects/team-01.png" alt="">
+                                            <img src="../imgs/projects/team-02.png" alt="">
+                                            <img src="../imgs/projects/team-03.png" alt="">
+                                            <img src="../imgs/projects/team-04.png" alt="">
+                                        </td>
+                                        <td class="table-status"><span>Completed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <!-- end the Projects -->
                 </div>
@@ -496,6 +583,7 @@
             </div>
         </div>
     <!-- end main padge -->
-    <script src="../dist/pro.js"></script>
+    <script src="../dist/common/commonlogic.js"></script>
+    <script src="../dist/dashboard/dash.js"></script>
 </body>
 </html>

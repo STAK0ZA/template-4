@@ -1,0 +1,317 @@
+/* start the site control */
+.main-box .box .site{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.common-head p{
+    font-size: 14px;
+}
+.main-box .box .site div>h4{
+    margin: 0;
+    margin-top: 10px;
+    font-weight: normal;
+}
+.main-box .box .site div>p{
+    color: var(--gray-color);
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+.main-box .box >textarea{
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 15px;
+    resize: none;
+    border: 0;
+    border: 1px solid #ccc;
+    border-radius:5px;
+}
+.main-box .box >textarea:focus{
+    outline: none;
+}
+.common-btn{
+    position: relative;
+    width: 85px;
+    height: 30px;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    padding: 3px;
+    display: block;
+    background-color: var(--gray-color);
+    box-sizing: content-box;
+    transition: .3s;
+    cursor: pointer;
+}
+.common-btn.active{
+    background-color: var(--blue-color);
+}
+.common-btn img{ 
+    position: absolute;
+    width: 30px;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: .3s;
+}
+.common-btn img::selection{ 
+    background-color: transparent;
+}
+.common-btn img.active{
+    left: calc(100% - 33px);
+}
+/* end the site control */
+/* start the General info */
+.main-box .box .general label{
+    display: block;
+    margin-bottom:10px;
+    font-size: 15px;
+    color: var(--gray-color);
+}
+.main-box .box .general input{
+    width: 100%;
+    padding: 10px ;
+    border-radius: 8px;
+    border: 0;
+    border: 1px solid #ccc;
+    margin-bottom:18px;
+}
+.main-box .box .general div input:not(:last-child){
+    margin-bottom:0;
+    cursor:no-drop;
+    color: #bbb;
+}
+.main-box .box .general input:focus{
+    outline: none;
+}
+.main-box .box .general div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.main-box .box .general div span a{
+    text-decoration: none;
+    color: var(--blue-color);
+    font-weight: 400;
+    font-size: 18px;
+}
+/* end the general info */
+/* start the securiy info */
+.main-box .box .securit-informations .security{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-box .box .securit-informations .security:not(:last-child){
+    border-bottom: 1px solid var(--main-color);
+}
+.main-box .box .securit-informations .security div h4{
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.main-box .box .securit-informations .security div p{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: var(--gray-color);
+    font-size: 14px;
+}
+.main-box .box .securit-informations .security button{
+    background-color: var(--blue-color);
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.main-box .box .securit-informations .security button a{
+    text-decoration: none;
+    color: white;
+    padding: 6px 12px;
+    display: block;
+}
+.main-box .box .securit-informations .security:last-child button{
+    background-color: var(--main-color);
+}
+.main-box .box .securit-informations .security:last-child button a{
+    color: black;
+}
+/* end the securiy info */
+/* start the social info */
+.main-box .box .input-social{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    /* filter: opacity(0.6); */
+}
+.main-box .box .input-social i{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius:  8px 0 0 8px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+.main-box .box .input-social i img{
+    filter: opacity(.5);
+    width: 14px;
+    height: 14px;
+    transition: .3s;
+}
+.main-box .box .input-social input{
+    height: 40px;
+    flex: 1;
+    background-color: #fafafa;
+    padding: 10px ;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    font-size: 13px;
+    border-bottom-left-radius: 0;
+    border: 0;
+    border: 1px solid #ccc;
+    border-left: 0;
+}
+.main-box .box .input-social:focus-within i img{
+    filter: opacity(1);
+
+}
+.main-box .box .input-social input:focus {
+    outline: none;
+    
+}
+/* end the social info */
+/* start the widgets control */
+.box .widgets div{
+    font-size: 18px;
+    padding: 0 5px;
+}
+.box .widgets div:not(:first-child){
+    margin-top: 10px;
+}
+.box .widgets div input{
+    appearance: none;
+}
+.box .widgets div input[type="checkbox"]:checked+label{
+    color: var(--blue-color);
+}
+.box .widgets div input[type="checkbox"]:checked+label::after{
+    border-color: var(--blue-color);
+}
+.box .widgets div input[type="checkbox"]:checked+label::before{
+    transform:scale(1) ;
+
+}
+.box .widgets div label{
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+}
+.box .widgets div label:hover::after{
+    border-color:var(--blue-color) ;
+}
+.box .widgets div label::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--gray-color);
+    border-radius: 4px;
+    transition: .3s;
+}
+.box .widgets div label::before{
+    content: "";
+    background-image: url(../imgs/Setting/widget/check-solid.svg);
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    transition: .3s;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-color: var(--blue-color);
+    border: 2px solid var(--blue-color);
+    border-radius: 3px;
+    transform:scale(0) rotate(360deg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* end the widgets control */
+/* start the backup manager */
+.main-box .box .check-time{
+    border-bottom: 1px solid var(--main-color);
+}
+.main-box .box .megaman{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+.main-box .box .megaman .meg-div{
+    border: 2px solid var(--main-color);
+    padding: 10px;
+    border-radius: 8px;
+    flex-basis: calc(100% / 3);
+    cursor: pointer;
+}
+.main-box .box .megaman .meg-div.active{
+    border: 2px solid var(--blue-color);
+    color: var(--blue-color);
+}
+.main-box .box .megaman .meg-div img{
+    width: 17px;
+}
+.main-box .box .megaman .meg-div h3{
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+.box .check-time div{
+    margin-bottom: 10px;
+}
+.box .check-time div input[type="radio"]{
+    appearance: none;
+}
+.box .check-time div label{
+    padding-left: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.box .check-time div label:not(:last-child){
+
+    padding-left: 30px;
+    position: relative;
+}
+.box .check-time div label::after{
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background-color: var(--blue-color);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    transform: scale(0) ;
+    transition: .3s;
+}
+.box .check-time div label::before{
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid var(--gray-color);
+    top: 0;
+    left: 0;
+    transition: .3s;
+}
+.box .check-time div input[type="radio"]:checked+label::after{
+    transform: scale(1);
+}
+.box .check-time div input[type="radio"]:checked+label::before{
+    border-color: var(--blue-color);
+}
+/* end the backup manager */

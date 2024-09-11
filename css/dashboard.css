@@ -163,6 +163,7 @@ body{
 .main-flex .content{
     background-color: var(--background-color);
     width: 100%;
+    overflow: hidden;
 }
 /* end setting for main padge */
 /* start the top-bar */
@@ -281,7 +282,7 @@ body{
 }
 /* end the dashboar */
 /* start welcome box*/
-.main-grid >.box:first-child{
+.main-grid .box.first{
     padding: 0;
 }
 .main-grid .box .hi{
@@ -952,8 +953,73 @@ body{
 .main-box .table{
     margin-top: 20px;
 }
-table,th,td{
-    overflow: auto;
-    border: 1px solid var(--blue-color);
+/* .table{
+    overflow: hidden;
+} */
+.res-table{
+    overflow-x: auto;
+}
+tr{
+    transition: .5s;
+}
+table{
+    min-width: 1100px;
+}
+.table table tbody tr{
+    font-size: 13px;
+}
+table thead tr td{
+    border-top: 1px solid var(--main-color);
+}
+
+table thead tr:first-child td{
+    font-weight: bold;
+    background-color: var(--main-color);
+}
+table{
+    border-spacing:0;
+
+}
+td{
+    padding: 10px;
+    border-left: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+table tr td:last-child{
+    border-right: 1px solid var(--main-color);
+}
+table  tr:hover {
+    background-color: #Faf7f7f7;
+}
+.table table tr td img{
+    width: 40px;
+    border-radius: 50%;
+    padding: 3px;
+    background-color: white;
+}
+.table table tr td img:not(:first-child){
+    margin-left: -20px;
+}
+.table table tr td.table-status{
+    color: white;
+}
+.table table tr td.table-status span{
+    padding: 5px;
+    border-radius: 8px;
+}
+.table table tr:nth-child(5) td.table-status span{
+    background-color: red;
+}
+.table table tr:nth-child(2) td.table-status span{
+    background-color: var(--blue-color);
+}
+.table table tr:nth-child(3) td.table-status span,
+.table table tr:nth-child(4) td.table-status span,
+.table table tr:nth-child(6) td.table-status span
+{
+    background-color: var(--green-color);
+}
+.table table tr:nth-child(1) td.table-status span{
+    background-color: orange;
 }
 /* end the Projects */
